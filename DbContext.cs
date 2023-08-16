@@ -10,7 +10,7 @@ namespace ConsoleApp.PostgreSQL
     public DbSet<Post> Posts { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    => optionsBuilder.UseNpgsql("postgres://postgres:postgres@localhost/postgres_demo?sslmode=disable").UseSnakeCaseNamingConvention();
+    => optionsBuilder.UseNpgsql("Host=localhost;Database=efcore_demo;Username=postgres;Password=postgres").UseSnakeCaseNamingConvention();
   }
 
   public class Blog
